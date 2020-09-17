@@ -1,4 +1,4 @@
-FROM daocloud.io/library/java:8-jdk-alpine
-VOLUME /tmp
-COPY target/*.jar app.jar
+FROM daocloud.io/library/java:8u40-b09
+ARG JAR_FILE
+COPY JAR_FILE app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
